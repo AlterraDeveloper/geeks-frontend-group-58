@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  flex-direction: column;
+  transform: scale(2);
+}
+
+#kgs-input {
+  padding: 10px 25px;
+  font-size: 24px;
+}
+
+#kgs-input:focus {
+  outline: none;
+}
+
+.currencies {
+  width: 400px;
+  display: none;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.currencies.visible {
+  display: flex;
+}
+
+.block {
+  background-color: #23f14c;
+  display: flex;
+  position: relative;
+}
+
+.block span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.block h2 {
+  margin-left: 25px;
+}
