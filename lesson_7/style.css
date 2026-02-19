@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: burlywood;
+}
+
+.container {
+  width: 35%;
+  box-shadow: 3px 3px 5px 2px #333;
+  border-radius: 20px;
+  height: 70vh;
+  min-width: 450px;
+}
+
+.header {
+  background-color: aquamarine;
+  padding: 10px 50px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  height: 25%;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 20px 0 0;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+.body {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+}
+
+.weekdays,
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.days {
+  height: 100%;
+}
+
+.weekday {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.day {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.weekday,
+.day,
+.days div {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+}
+
+.day:hover {
+  border: 1px solid aquamarine;
+  cursor: pointer;
+}
+
+.day.current {
+  background-color: aquamarine;
+  color: black;
+}
+
+.languages {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 50px;
+}
+
+.language label {
+  cursor: pointer;
+}
+
+.language img {
+  width: 80px;
+  height: 80px;
+  filter: grayscale(75%);
+}
+
+.language input[type="radio"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.language:has(input[type="radio"]:checked) img {
+  border: 5px solid aquamarine;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 43px 12px #7fffd4;
+  -moz-box-shadow: 0px 0px 43px 12px #7fffd4;
+  box-shadow: 0px 0px 43px 12px #7fffd4;
+  transform: scale(1.25);
+  filter: none;
+}
+
+.ramadan {
+  -webkit-box-shadow: -10px 10px 10px -7px rgba(197, 255, 17, 0.88);
+  box-shadow: -10px 10px 10px -7px rgba(197, 255, 17, 0.88);
+  border-radius: 50%;
+}
